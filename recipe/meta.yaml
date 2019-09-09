@@ -1,4 +1,4 @@
-{% set version = '0.2.0' %}
+{% set version = '0.2.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/esquisse_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/esquisse/esquisse_{{ version }}.tar.gz
-  sha256: 31776574a5d86cc9a9e8c44ad909368b623ea8b265dd73d3807d7a3a1097889b
+  sha256: bd138d2685773d94f32747e2b6bcb2a9241e90b5a60650650dfa04525ea628cc
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -28,6 +28,7 @@ requirements:
     - r-rcolorbrewer
     - r-ggplot2 >=3.0.0
     - r-ggthemes
+    - r-hrbrthemes
     - r-htmltools
     - r-jsonlite
     - r-miniui
@@ -42,6 +43,7 @@ requirements:
     - r-rcolorbrewer
     - r-ggplot2 >=3.0.0
     - r-ggthemes
+    - r-hrbrthemes
     - r-htmltools
     - r-jsonlite
     - r-miniui
@@ -64,7 +66,9 @@ about:
     your variables. You can quickly visualize your data accordingly to their type, export
     to 'PNG' or 'PowerPoint', and retrieve the code to reproduce the chart.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - LICENSE
 
 extra:
   recipe-maintainers:
@@ -73,7 +77,7 @@ extra:
 # Package: esquisse
 # Type: Package
 # Title: Explore and Visualize Your Data Interactively
-# Version: 0.2.0
+# Version: 0.2.2
 # Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")), person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")), person("Ian", "Carroll", comment = "Facets support", role = "ctb"))
 # Description: A 'shiny' gadget to create 'ggplot2' charts interactively with drag-and-drop to map your variables. You can quickly visualize your data accordingly to their type, export to 'PNG' or 'PowerPoint', and retrieve the code to reproduce the chart.
 # URL: https://github.com/dreamRs/esquisse
@@ -82,12 +86,12 @@ extra:
 # Encoding: UTF-8
 # LazyData: true
 # RoxygenNote: 6.1.1
-# Imports: miniUI, rstudioapi, shiny (>= 1.0.0), htmltools, jsonlite, shinyWidgets (>= 0.4.1), ggplot2 (>= 3.0.0), ggthemes, RColorBrewer, scales, stringi, rlang (>= 0.3.1)
+# Imports: miniUI, rstudioapi, shiny (>= 1.0.0), htmltools, jsonlite, shinyWidgets (>= 0.4.1), ggplot2 (>= 3.0.0), ggthemes, hrbrthemes, RColorBrewer, scales, stringi, rlang (>= 0.3.1)
 # Suggests: officer, rvg, rio, DT, testthat (>= 2.1.0), knitr
 # VignetteBuilder: knitr
 # NeedsCompilation: no
-# Packaged: 2019-06-20 08:42:20 UTC; perri
+# Packaged: 2019-08-22 13:13:12 UTC; perri
 # Author: Fanny Meyer [aut], Victor Perrier [aut, cre], Ian Carroll [ctb] (Facets support)
 # Maintainer: Victor Perrier <victor.perrier@dreamrs.fr>
 # Repository: CRAN
-# Date/Publication: 2019-06-20 09:00:19 UTC
+# Date/Publication: 2019-08-22 13:30:02 UTC

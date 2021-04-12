@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/esquisse_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/esquisse/esquisse_{{ version }}.tar.gz
-  sha256: 23c7eb8659de230c77d38618f0aa78c67c29e1db38d7e90fd5e9910eeb1f70ba
+  sha256: 5ba82f06bad823b1fffc9b7435d035e71120781c3e48628d9596529d523af7cb
 
 build:
   merge_build_host: true  # [win]
@@ -25,34 +25,28 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-rcolorbrewer
+    - r-datamods
     - r-ggplot2 >=3.0.0
-    - r-ggthemes
-    - r-hrbrthemes
     - r-htmltools
     - r-jsonlite
-    - r-miniui
     - r-rlang >=0.3.1
     - r-rstudioapi
     - r-scales
-    - r-shiny >=1.0.0
-    - r-shinywidgets >=0.4.1
-    - r-stringi
+    - r-shiny >=1.1.0
+    - r-shinywidgets >=0.6.0
+    - r-styler
   run:
     - r-base
-    - r-rcolorbrewer
+    - r-datamods
     - r-ggplot2 >=3.0.0
-    - r-ggthemes
-    - r-hrbrthemes
     - r-htmltools
     - r-jsonlite
-    - r-miniui
     - r-rlang >=0.3.1
     - r-rstudioapi
     - r-scales
-    - r-shiny >=1.0.0
-    - r-shinywidgets >=0.4.1
-    - r-stringi
+    - r-shiny >=1.1.0
+    - r-shinywidgets >=0.6.0
+    - r-styler
 
 test:
   commands:
@@ -61,7 +55,7 @@ test:
 
 about:
   home: https://github.com/dreamRs/esquisse
-  license: GPL-3
+  license: GPL-3.0-only
   summary: A 'shiny' gadget to create 'ggplot2' charts interactively with drag-and-drop to map your variables. You can quickly visualize your data accordingly to their type, export to 'PNG' or 'PowerPoint', and retrieve the code to reproduce the chart.
   license_family: GPL3
   license_file:

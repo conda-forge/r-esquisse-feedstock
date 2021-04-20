@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/esquisse_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/esquisse/esquisse_{{ version }}.tar.gz
-  sha256: 5ba82f06bad823b1fffc9b7435d035e71120781c3e48628d9596529d523af7cb
+  sha256: 36905e614eb7d081b4021a2043a2ad426ce1d8d10faa3c38914996655e223714
 
 build:
   merge_build_host: true  # [win]

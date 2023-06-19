@@ -1,11 +1,11 @@
-About r-esquisse
-================
+About r-esquisse-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-esquisse-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/dreamRs/esquisse
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-esquisse-feedstock/blob/main/LICENSE.txt)
 
 Summary: A 'shiny' gadget to create 'ggplot2' charts interactively with drag-and-drop to map your variables. You can quickly visualize your data accordingly to their type, export to 'PNG' or 'PowerPoint', and retrieve the code to reproduce the chart.
 

@@ -23,30 +23,37 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-datamods
+    - r-bslib
+    - r-datamods >=1.5.1
+    - r-downlit
     - r-ggplot2 >=3.0.0
-    - r-htmltools
+    - r-htmltools >=0.5.0
     - r-jsonlite
+    - r-phosphoricons >=0.2.1
     - r-rlang >=0.3.1
     - r-rstudioapi
     - r-scales
     - r-shiny >=1.1.0
     - r-shinywidgets >=0.6.0
-    - r-styler
+    - r-shinybusy
   run:
     - r-base
-    - r-datamods
+    - r-bslib
+    - r-datamods >=1.5.1
+    - r-downlit
     - r-ggplot2 >=3.0.0
-    - r-htmltools
+    - r-htmltools >=0.5.0
     - r-jsonlite
+    - r-phosphoricons >=0.2.1
     - r-rlang >=0.3.1
     - r-rstudioapi
     - r-scales
     - r-shiny >=1.1.0
     - r-shinywidgets >=0.6.0
-    - r-styler
+    - r-shinybusy
 
 test:
   commands:

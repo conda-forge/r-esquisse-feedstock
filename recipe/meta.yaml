@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "2.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/esquisse_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/esquisse/esquisse_{{ version }}.tar.gz
-  sha256: 1a983a0f3f55b1f85a3e2693ea951510a7bd5bd3bd43a87aaf2ca328dbde8815
+  sha256: 950e6d25a7ffe7afb056f20fcbd8904ebda82a54a78466f2e24cef6978e96770
 
 build:
   merge_build_host: true  # [win]
@@ -23,30 +23,37 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-datamods
+    - r-bslib
+    - r-datamods >=1.5.1
+    - r-downlit
     - r-ggplot2 >=3.0.0
-    - r-htmltools
+    - r-htmltools >=0.5.0
     - r-jsonlite
+    - r-phosphoricons >=0.2.1
     - r-rlang >=0.3.1
     - r-rstudioapi
     - r-scales
     - r-shiny >=1.1.0
     - r-shinywidgets >=0.6.0
-    - r-styler
+    - r-shinybusy
   run:
     - r-base
-    - r-datamods
+    - r-bslib
+    - r-datamods >=1.5.1
+    - r-downlit
     - r-ggplot2 >=3.0.0
-    - r-htmltools
+    - r-htmltools >=0.5.0
     - r-jsonlite
+    - r-phosphoricons >=0.2.1
     - r-rlang >=0.3.1
     - r-rstudioapi
     - r-scales
     - r-shiny >=1.1.0
     - r-shinywidgets >=0.6.0
-    - r-styler
+    - r-shinybusy
 
 test:
   commands:

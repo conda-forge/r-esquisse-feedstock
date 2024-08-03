@@ -1,6 +1,5 @@
 {% set version = "2.0.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-esquisse
@@ -13,8 +12,7 @@ source:
   sha256: 950e6d25a7ffe7afb056f20fcbd8904ebda82a54a78466f2e24cef6978e96770
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/

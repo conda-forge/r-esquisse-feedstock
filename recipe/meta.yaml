@@ -1,4 +1,4 @@
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/esquisse_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/esquisse/esquisse_{{ version }}.tar.gz
-  sha256: 625a63fc997874eb45f9bb4f9f2b35ebe206ef801e81c43d22890e2fe7de01c8
+  sha256: 98927406ff891f37a159be9a60e1db9f99135cd9048904e4784c07397909e060
 
 build:
   number: 0

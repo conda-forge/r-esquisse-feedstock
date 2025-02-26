@@ -37,6 +37,7 @@ requirements:
     - r-shiny >=1.1.0
     - r-shinywidgets >=0.6.0
     - r-shinybusy
+    - r-zip
   run:
     - r-base
     - r-bslib
@@ -52,6 +53,7 @@ requirements:
     - r-shiny >=1.1.0
     - r-shinywidgets >=0.6.0
     - r-shinybusy
+    - r-zip
 
 test:
   commands:
